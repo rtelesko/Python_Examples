@@ -1,4 +1,4 @@
-# Python Examples BA
+# Python Examples
 
 This repository contains Python example programs for learning and demonstrating core programming concepts. Most examples are based on topics from Tony Gaddis' *Starting Out with Python* and are organized by chapter. The repository also includes separate Jupyter notebooks for introductory **pandas** and **Matplotlib** examples.
 
