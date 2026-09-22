@@ -1,4 +1,11 @@
 # This program demonstrates default arguments.
+
+# def display_stars(cols=10, rows=1):   # default parameter values
+# display_stars(7, 3)                   # positional arguments
+# display_stars(cols=7, rows=3)         # keyword arguments
+
+# parameters are in the function definition; arguments are in the function call.
+
 def main():
     # Use the default arguments for cols and rows.
     display_stars()
