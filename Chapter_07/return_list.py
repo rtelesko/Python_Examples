@@ -29,7 +29,6 @@ def get_values():
         # Want to do this again?
         print('Do you want to add another number?')
         again = input('y = yes, anything else = no: ')
-        print
         
     # Return the list.
     return values
