@@ -26,7 +26,7 @@ print(tuple(tup6))
 # Deleting Tuple Elements
 tup9 = ('C#', 'Python', 'Java', 'JavaScript')
 # tuple = class for generating a tuple object
-tup10 = tuple(item for item in tup9 if item != 'Java')
+tup10 = tuple(item for item in tup9 if item != 'Java')      # generator expression, NOT tuple comprehension
 print(tup10)
 
 # Basic Tuple operations
