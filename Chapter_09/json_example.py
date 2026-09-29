@@ -1,63 +1,34 @@
 import json
 
-# Define data as a dict
-data = {
-    "name": "John",
+# A dictionary is a Python data structure in memory,
+# while JSON is a text format used to store or exchange structured data.
+
+# Create a Python dictionary
+person = {
+    "name": "Alice",
     "age": 30,
-    "city": "New York",
-    "hobbies": ["reading", "traveling", "cooking"]
+    "student": False
 }
 
-# Pretty print JSON data as string with dumps
-pretty_json = json.dumps(data, indent=4)
+# json.dumps() and json.loads() convert between Python data and JSON text
 
-# Print pretty JSON
-print(pretty_json)
-print(type(pretty_json))
+# Convert the Python dictionary into JSON text
+json_text = json.dumps(person)
 
-# Printing first hobby
-print("First Hobby in List: " + data["hobbies"][0])
+print("JSON:")
+print(json_text)
 
-# JSON string data
-employee_string = '{"first_name": "Michael", "last_name": "Rodgers", "department": "Marketing"}'
+# Show the data type
+print(type(json_text))   # <class 'str'>
 
-# Check data type with type() method
-print(type(employee_string))
 
-# Convert string to dict object with loads (with error handling)
+# Convert the JSON text back into a Python dictionary
 try:
-    json_object = json.loads(employee_string)
-    # Check new data type
-    print(type(json_object))
-    # Access first_name in dictionary
-    print(json_object["first_name"])
-except json.JSONDecodeError as e:
-    print(f"Invalid JSON in employee_string: {e}")
+    person_again = json.loads(json_text)
+    print(person_again)
 
-# JSON string with multiple employees
-employees_string = '''
-{
-    "employees" : [
-       {
-           "first_name": "Michael", 
-           "last_name": "Rodgers", 
-           "department": "Marketing"
-        },
-       {
-           "first_name": "Michelle", 
-           "last_name": "Williams", 
-           "department": "Engineering"
-        }
-    ]
-}
-'''
+    # Show the data type
+    print(type(person_again))   # <class 'dict'>
 
-# Convert string to object (with error handling)
-try:
-    data = json.loads(employees_string)
-    print(type(data))
-    # Access last_name values
-    for employee in data["employees"]:
-        print(employee["last_name"])
-except json.JSONDecodeError as e:
-    print(f"Invalid JSON in employees_string: {e}")
+except json.JSONDecodeError as error:
+    print("JSON parsing error:", error)
