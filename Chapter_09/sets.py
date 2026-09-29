@@ -1,3 +1,7 @@
+# Defining an empty set with the constructor set(), not {} !!
+# baseball = set()
+# basketball = set()
+
 # This program demonstrates various set operations.
 baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
 basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
