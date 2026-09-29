@@ -27,5 +27,5 @@ capital = ['New Delhi', 'Bern', 'Vienna']
 dict_using_comp = {key: value for (key, value) in zip(state, capital)}
 print("Output Dictionary using dictionary comprehensions:", dict_using_comp)
 # Shorter Alternative:
-# dict_using_comp = zip(state, capital)
+# dict_using_comp = zip(state, capital)   # returns <class 'zip'>
 # print(dict(dict_using_comp))
